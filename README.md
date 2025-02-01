@@ -6,6 +6,7 @@ Bu rapor, Android işletim sistemine sahip bir cihazda ağ trafiğinin izlenmesi
 2. Metodoloji
    
 2.1 Kullanılan Araçlar
+![image](https://github.com/user-attachments/assets/a098ec66-0c12-491c-814d-f9a4940d47f9)
 
 Android Uygulaması: 
 Arka planda çalışan bir servis ile ağ trafiğini kayıt altına almak için geliştirilmiştir.
