@@ -18,5 +18,9 @@
         android:layout_height="wrap_content"
         android:text="Stop Logging"
         android:layout_marginTop="10dp"/>
-
+    <Button
+        android:id="@+id/shareCsvButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CSV Dosyasını Paylaş" />
 </LinearLayout>

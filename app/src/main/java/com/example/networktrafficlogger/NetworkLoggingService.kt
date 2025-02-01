@@ -3,6 +3,7 @@ package com.example.networktrafficlogger
 import android.app.Service
 import android.content.Intent
 import android.net.TrafficStats
+import android.os.Environment
 import android.os.IBinder
 import android.util.Log
 import java.io.File
@@ -25,7 +26,8 @@ class NetworkLoggingService : Service() {
     }
 
     private fun monitorNetworkTraffic() {
-        val csvFile = File(getExternalFilesDir(null), "network_traffic.csv")
+        val csvFile = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "network_traffic.csv")
+
         val writer = PrintWriter(FileWriter(csvFile, true))
         writer.println("Timestamp,Received Bytes,Transmitted Bytes")
 
