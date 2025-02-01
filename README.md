@@ -41,11 +41,11 @@ Bu test sonucunda, JMeter ile oluşturulan trafik yükünün, Android cihazın a
 6. Teslim Edilecek Dosyalar
 -Android Uygulama Kaynak Kodu: Açıklamalı olarak paylaşılan tüm kodlar.
 
-- **CSV Dosyaları:**
-  - **normal_traffic.csv** (Test öncesi ağ trafiği verileri)
-  - **increased_traffic.csv** (JMeter yükü sonrası veriler)
-- **Bu Rapor:** Test süreci ve sonuçları içeren detaylı dokümantasyon.
-- **Uygulama Ekran Görüntüleri:** Android uygulamasının çalışmasını gösteren görseller.
+CSV Dosyaları:
+normal_traffic.csv (Test öncesi ağ trafiği verileri)
+increased_traffic.csv (JMeter yükü sonrası veriler)
+  Bu Rapor: Test süreci ve sonuçları içeren detaylı dokümantasyon.
+
 Sonuç
 **Proje başarıyla tamamlanmıştır ve ağ trafiğinin test edilmesi için önerilen yöntemler uygulanmıştır.**
 
