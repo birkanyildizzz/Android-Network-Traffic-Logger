@@ -19,14 +19,25 @@ class NetworkLoggingService : Service() {
     private val TAG = "NetworkLoggerService"
     private var isRunning = true
 
+    private var isTrafficIncreased = false // Normal mi yoksa yük testi mi?
+
     override fun onStartCommand(intent: Intent?, flags: Int, startId: Int): Int {
         Log.d(TAG, "Service started")
+        // Intent ile "yük testi aktif mi?" kontrolü yap
+        isTrafficIncreased = intent?.getBooleanExtra("TRAFFIC_INCREASED", false) ?: false
         Thread { monitorNetworkTraffic() }.start()
         return START_STICKY
     }
 
     private fun monitorNetworkTraffic() {
-        val csvFile = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "network_traffic.csv")
+        // Hangi CSV dosyasına kayıt yapacağını belirle
+        val csvFile =  if (isTrafficIncreased) {
+            File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "increased_traffic.csv")
+        } else {
+            File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), "normal_traffic.csv")
+        }
+
+
 
         val writer = PrintWriter(FileWriter(csvFile, true))
         writer.println("Timestamp,Received Bytes,Transmitted Bytes")

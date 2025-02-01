@@ -7,20 +7,33 @@
     android:padding="16dp">
 
     <Button
-        android:id="@+id/startServiceButton"
+        android:id="@+id/startNormalTrafficButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start Logging" />
+        android:text="Normal Trafik Başlat" />
+
+    <Button
+        android:id="@+id/startIncreasedTrafficButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yük Testi Başlat" />
 
     <Button
         android:id="@+id/stopServiceButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop Logging"
-        android:layout_marginTop="10dp"/>
+        android:text="Servisi Durdur" />
+
     <Button
-        android:id="@+id/shareCsvButton"
+        android:id="@+id/shareNormalCsvButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CSV Dosyasını Paylaş" />
+        android:text="Normal CSV Paylaş" />
+
+    <Button
+        android:id="@+id/shareIncreasedCsvButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yük Testi CSV Paylaş" />
+
 </LinearLayout>
